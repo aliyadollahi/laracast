@@ -1,23 +1,8 @@
 <x-layout>
     <x-slot:heading>
-        Single Job Page
+        Job Page for {{$job['title']}}
     </x-slot:heading>
-    <h1>Job For:{{$job['name']}}</h1>
-    <ul>
+    <h1 class="font-extrabold bg-red-400">Pays per year is :{{$job['salary']}}</h1>
 
-
-            @foreach ($job['skills'] as $skill)
-
-                <span class="font-bold">
-                    {{$skill }} |
-                </span>
-
-
-
-
-            @endforeach
-
-
-    </ul>
 
 </x-layout>
