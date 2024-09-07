@@ -18,9 +18,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::get('/jobs', function ()  {
+        $jobs = Job::with('employer')->get();
        return  view('jobs', [
-        'jobs' => Job::all()
-        ]);
+        'jobs'=>$jobs,
+       ]);
 
 });
 Route::get('/jobs/{id}' , function($id) {
